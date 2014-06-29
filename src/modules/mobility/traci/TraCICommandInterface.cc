@@ -85,6 +85,11 @@ TraCICoord TraCICommandInterface::getVehiclePosition(std::string vehicleId)
     return genericGetCoord(CMD_GET_VEHICLE_VARIABLE, vehicleId, VAR_POSITION, RESPONSE_GET_VEHICLE_VARIABLE);
 }
 
+std::list<std::string> TraCICommandInterface::getVehicleIds()
+{
+    return genericGetStringList(CMD_GET_VEHICLE_VARIABLE, "", ID_LIST, RESPONSE_GET_VEHICLE_VARIABLE);
+}
+
 std::list<std::string> TraCICommandInterface::getRouteIds() {
     return genericGetStringList(CMD_GET_ROUTE_VARIABLE, "", ID_LIST, RESPONSE_GET_ROUTE_VARIABLE);
 }
