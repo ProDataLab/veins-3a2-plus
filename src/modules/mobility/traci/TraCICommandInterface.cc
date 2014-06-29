@@ -80,6 +80,11 @@ std::list<std::string> TraCICommandInterface::getVehicleTypeIds() {
     return genericGetStringList(CMD_GET_VEHICLETYPE_VARIABLE, "", ID_LIST, RESPONSE_GET_VEHICLETYPE_VARIABLE);
 }
 
+TraCICoord TraCICommandInterface::getVehiclePosition(std::string vehicleId)
+{
+    return genericGetCoord(CMD_GET_VEHICLE_VARIABLE, vehicleId, VAR_POSITION, RESPONSE_GET_VEHICLE_VARIABLE);
+}
+
 std::list<std::string> TraCICommandInterface::getRouteIds() {
     return genericGetStringList(CMD_GET_ROUTE_VARIABLE, "", ID_LIST, RESPONSE_GET_ROUTE_VARIABLE);
 }

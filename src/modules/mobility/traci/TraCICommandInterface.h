@@ -65,6 +65,7 @@ class TraCICommandInterface
 		bool addVehicle(std::string vehicleId, std::string vehicleTypeId, std::string routeId, simtime_t emitTime_st = -DEPART_NOW, double emitPosition = -DEPART_POS_BASE, double emitSpeed = -DEPART_SPEED_MAX, int8_t emitLane = -DEPART_LANE_BEST_FREE);
 		std::string getVehicleTypeId(std::string nodeId);
 		std::list<std::string> getVehicleTypeIds();
+        TraCICoord getVehiclePosition(std::string vehicleId);
 		std::list<std::string> getRouteIds();
 		bool changeVehicleRoute(std::string nodeId, const std::list<std::string>& edges);
 		std::pair<double, double> positionConversionLonLat(const TraCICoord&);

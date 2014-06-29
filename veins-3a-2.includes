@@ -1,0 +1,15 @@
+src
+src/base/connectionManager
+src/base/modules
+src/base/phyLayer
+src/base/utils
+src/inet
+src/modules/analogueModel
+src/modules/application/ieee80211p
+src/modules/application/traci
+src/modules/mac/ieee80211p
+src/modules/mobility/traci
+src/modules/obstacle
+src/modules/phy
+src/modules/utility
+src/modules/world/annotations
