@@ -119,7 +119,9 @@ class TraCIMobility : public BaseMobility
 			return manager;
 		}
 		virtual TraCICommandInterface* getCommandInterface() const {
-			return getManager()->getCommandInterface();
+            TraCIScenarioManager* sm = getManager();
+            ASSERT(sm);
+            return sm->getCommandInterface();
 		}
 		void commandSetSpeedMode(int32_t bitset) {
 			getCommandInterface()->setSpeedMode(getExternalId(), bitset);
